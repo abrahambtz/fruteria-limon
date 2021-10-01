@@ -9,7 +9,7 @@ def read():
             data.append(product)
     return data
 def append_product(product_name, price):
-    DATA = [product_name, price]
+    DATA = [product_name.lower(), price]
     with open('bd/products.csv','a', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(DATA)
